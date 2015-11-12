@@ -1,12 +1,16 @@
 package br.com.trocabr.modelo;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Usuario {
+public class Usuario implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,6 +19,7 @@ public class Usuario {
 	private String nome;
 	private String email;
 	private String cidade;
+	private String uf;
 	
 	
 	public long getId() {
@@ -40,6 +45,12 @@ public class Usuario {
 	}
 	public void setCidade(String cidade) {
 		this.cidade = cidade;
+	}
+	public String getUf() {
+		return uf;
+	}
+	public void setUf(String uf) {
+		this.uf = uf;
 	}
 	@Override
 	public int hashCode() {

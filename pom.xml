@@ -32,6 +32,7 @@
         <version>2.2</version>
         <scope>provided</scope>
       </dependency>
+     
     </dependencies>
   </dependencyManagement>
   <dependencies>
@@ -70,6 +71,11 @@
       <artifactId>javax.faces-api</artifactId>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+	  <groupId>org.primefaces</groupId>
+	  <artifactId>primefaces</artifactId>
+	  <version>4.0</version>
+	</dependency>
   </dependencies>
   <build>
     <finalName>trocabr</finalName>
